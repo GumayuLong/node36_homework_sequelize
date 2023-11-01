@@ -10,11 +10,3 @@ app.listen(8080);
 
 app.use("/api", rootRoutes);
 
-// connect to database
-const connection = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "longvip5",
-	database: "node36homeworksql",
-	port: 3307,
-});
