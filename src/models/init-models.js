@@ -7,8 +7,6 @@ import _orders from  "./orders.js";
 import _rate_res from  "./rate_res.js";
 import _restaurant from  "./restaurant.js";
 import _sub_food from  "./sub_food.js";
-import _user_not_like_and_rate from  "./user_not_like_and_rate.js";
-import _user_not_rate from  "./user_not_rate.js";
 import _users from  "./users.js";
 
 export default function initModels(sequelize) {
@@ -19,8 +17,6 @@ export default function initModels(sequelize) {
   const rate_res = _rate_res.init(sequelize, DataTypes);
   const restaurant = _restaurant.init(sequelize, DataTypes);
   const sub_food = _sub_food.init(sequelize, DataTypes);
-  const user_not_like_and_rate = _user_not_like_and_rate.init(sequelize, DataTypes);
-  const user_not_rate = _user_not_rate.init(sequelize, DataTypes);
   const users = _users.init(sequelize, DataTypes);
 
   orders.belongsTo(food, { as: "food", foreignKey: "food_id"});
@@ -48,8 +44,6 @@ export default function initModels(sequelize) {
     rate_res,
     restaurant,
     sub_food,
-    user_not_like_and_rate,
-    user_not_rate,
     users,
   };
 }

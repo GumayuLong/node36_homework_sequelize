@@ -1,7 +1,4 @@
-/** @format */
-
 import express from "express"; // npm install express
-import mysql from "mysql2"; // npm install mysql2
 import rootRoutes from "./src/routes/rootRoutes.js";
 
 const app = express();
